@@ -1,4 +1,5 @@
 data
+openface/analysis
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -9,6 +10,8 @@ __pycache__/
 *.so
 
 .idea
+
+
 
 # Distribution / packaging
 .Python

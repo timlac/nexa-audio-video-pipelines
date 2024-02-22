@@ -2,6 +2,7 @@ import os
 import opensmile
 import glob
 
+
 from utils import get_filename
 
 smile = opensmile.Smile(
@@ -9,11 +10,10 @@ smile = opensmile.Smile(
     feature_level=opensmile.FeatureLevel.LowLevelDescriptors,
 )
 
-input_dir = "../data/test/sentimotion/**/*"
+input_dir = "/home/tim/Work/nexa/nexa-audio-video-pipelines/data/test/sentimotion/**/*"
 
 # all the output .csv files will be put in this directory, under the same name
-output_dir = "../data/out/opensmile/multiple"
-os.makedirs(output_dir, exist_ok=True)
+output_dir = "/home/tim/Work/nexa/nexa-audio-video-pipelines/data/out/opensmile/multiple"
 
 file_paths = glob.glob(input_dir, recursive=True)
 

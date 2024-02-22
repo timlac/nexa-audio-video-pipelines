@@ -2,8 +2,10 @@ import opensmile
 import os
 import pandas as pd
 
-input_path = "/home/tim/Work/nexa/nexa-audio-video-pipelines/data/test/sentimotion/A67_pea_v_3.mov"
-output_path = "/home/tim/Work/nexa/nexa-audio-video-pipelines/data/out/opensmile/single/A67_pea_v_3.csv"
+input_path = "../data/test/sentimotion/A67_pea_v_3.mov"
+output_dir = "../data/out/opensmile/single/"
+output_filename = "A67_pea_v_3.csv"
+os.makedirs(output_dir, exist_ok=True)
 
 # set opensmile parameters
 smile = opensmile.Smile(
@@ -15,4 +17,4 @@ smile = opensmile.Smile(
 df = smile.process_file(input_path)
 
 # save csv
-df.to_csv(output_path)
+df.to_csv(os.path.join(output_dir, output_filename), index=False)

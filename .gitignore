@@ -4,6 +4,8 @@ data/out/openpose
 data/out/openface
 data/out/opensmile
 
+data/test/openpose_example
+data/test/dyads
 
 openface/analysis
 
@@ -17,7 +19,7 @@ __pycache__/
 
 .idea
 
-
+venv
 
 # Distribution / packaging
 .Python

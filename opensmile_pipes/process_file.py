@@ -2,8 +2,8 @@ import opensmile
 import os
 import pandas as pd
 
-input_path = "../data/test/sentimotion/A67_pea_v_3.mov"
-output_dir = "../data/out/opensmile/single/"
+input_path = "data/test/sentimotion/A67_pea_v_3.mov"
+output_dir = "data/out/opensmile/single/"
 output_filename = "A67_pea_v_3.csv"
 os.makedirs(output_dir, exist_ok=True)
 

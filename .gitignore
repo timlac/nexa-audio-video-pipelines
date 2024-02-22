@@ -1,4 +1,10 @@
-data
+data/models/openpose
+
+data/out/openpose
+data/out/openface
+data/out/opensmile
+
+
 openface/analysis
 
 # Byte-compiled / optimized / DLL files

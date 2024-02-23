@@ -13,7 +13,7 @@ CONTAINER_NAME=d0ckaaa/openpose  # Name of the OpenPose Docker image
 NET_RESOLUTION="-1x160"  # Adjust based on your GPU memory and requirements
 DISPLAY="0"
 RENDER_POSE="0"
-WRITE_JSON="output/"  # Directory inside the container where JSON output will be saved
+WRITE_JSON="/output"  # Directory inside the container where JSON output will be saved
 
 # Start the container in detached mode and keep it running
 CONTAINER_ID=$(docker run -d --gpus all --user $(id -u):$(id -g) -v $(dirname "$HOST_VIDEO_PATH"):/input \
@@ -28,7 +28,7 @@ docker cp $HOST_MODELS_DIR $CONTAINER_ID:/opt/openpose/
 # Execute OpenPose within the container
 docker exec $CONTAINER_ID /bin/bash -c "cd /opt/openpose && ./build/examples/openpose/openpose.bin \
 --video /input/'$(basename "$HOST_VIDEO_PATH")' \
---display $DISPLAY --render_pose $RENDER_POSE --net_resolution $NET_RESOLUTION --write_json /output"
+--display $DISPLAY --render_pose $RENDER_POSE --net_resolution $NET_RESOLUTION --write_json $WRITE_JSON"
 
 
 # Stop and remove the container

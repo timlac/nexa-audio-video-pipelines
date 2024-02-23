@@ -1,17 +1,19 @@
 import os
 import subprocess
 from glob import glob
+from dotenv import load_dotenv
 
+# Load variables from .env file
+load_dotenv()
+PROJECT_ROOT = os.getenv("PROJECT_ROOT")
+DOCKER_COMPOSE_PATH = os.getenv("DOCKER_COMPOSE_PATH")
 
-os.environ['DATA_MOUNT'] = "/home/tim/Work/nexa/nexa-audio-video-pipelines/data"
+# set the DATA_MOUNT variable
+os.environ['DATA_MOUNT'] = os.path.join(PROJECT_ROOT, 'data')
 DATA_MOUNT = os.getenv("DATA_MOUNT")
 
-
-DOCKER_COMPOSE_PATH = "/home/tim/Work/nexa/tools/OpenFace/docker-compose.yml"
-
 INPUT_DIR = os.path.join(DATA_MOUNT, "test/sentimotion")
-OUTPUT_DIR = os.path.join(DATA_MOUNT, "out/multiple")
-
+OUTPUT_DIR = os.path.join(DATA_MOUNT, "out/openface/multiple")
 
 input_files = glob(INPUT_DIR + "/*")
 

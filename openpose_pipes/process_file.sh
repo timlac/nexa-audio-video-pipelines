@@ -9,6 +9,9 @@ HOST_OUTPUT_DIR=$PROJECT_ROOT/data/out/openpose/single  # Directory where you wa
 HOST_MODELS_DIR=$PROJECT_ROOT/data/models/openpose/models/  # Directory where your OpenPose models are located on your host
 CONTAINER_NAME=d0ckaaa/openpose  # Name of the OpenPose Docker image
 
+# Create the HOST_OUTPUT_DIR if it doesn't exist
+mkdir -p "$HOST_OUTPUT_DIR"
+
 # Define OpenPose parameters
 NET_RESOLUTION="-1x160"  # Adjust based on your GPU memory and requirements
 DISPLAY="0"

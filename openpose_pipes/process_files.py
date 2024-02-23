@@ -14,6 +14,8 @@ host_base_output_dir = os.path.join(PROJECT_ROOT, 'data/out/openpose/multiple')
 host_models_dir = os.path.join(PROJECT_ROOT, 'data/models/openpose/models/')
 container_name = 'd0ckaaa/openpose'
 
+os.makedirs(host_base_output_dir, exist_ok=True)
+
 # Define OpenPose parameters
 net_resolution = '-1x160'
 display = '0'

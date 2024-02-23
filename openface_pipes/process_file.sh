@@ -15,4 +15,6 @@ file="$DATA_MOUNT/test/sentimotion/A67_pea_v_3.mov"
 # run Openface with docker
 docker exec openface FeatureExtraction -2Dfp -3Dfp -pdmparams -pose -aus -gaze -f "$file" -out_dir "$OUT_PATH"
 
+docker exec openface chown -R $(id -u):$(id -g) "$OUT_PATH"
+
 docker-compose -f "$DOCKER_COMPOSE_PATH" down

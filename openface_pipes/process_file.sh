@@ -5,7 +5,7 @@ export $(cat ../.env | xargs)
 
 export DATA_MOUNT=$PROJECT_ROOT/data
 
-OUT_PATH=$DATA_MOUNT/out/single
+OUT_PATH=$DATA_MOUNT/out/openface/single
 
 docker-compose -f "$DOCKER_COMPOSE_PATH" up -d openface && sync # sync is to wait till service starts
 

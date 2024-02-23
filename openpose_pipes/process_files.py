@@ -58,7 +58,8 @@ for video_file in os.listdir(host_video_dir):
     # Execute OpenPose within the running container for each video
     exec_command = (f'docker exec {container_id} /bin/bash -c "cd /opt/openpose && ./build/examples/openpose/openpose.bin '
                     f'--video /input/{video_file} '
-                    f'--display {display} --render_pose {render_pose} --net_resolution {net_resolution} --write_json /output/{video_name}"')
+                    f'--display {display} --render_pose {render_pose} --net_resolution {net_resolution} --hand --face'
+                    f'--write_json /output/{video_name}"')
 
     run_command(exec_command)
 

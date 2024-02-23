@@ -1,18 +1,23 @@
 import subprocess
 import os
 import glob
+from dotenv import load_dotenv
+
+
+# Load variables from .env file
+load_dotenv()
+PROJECT_ROOT = os.getenv("PROJECT_ROOT")
 
 # Define paths
-host_video_dir = '/home/tim/Work/nexa/nexa-audio-video-pipelines/data/test/sentimotion'
-host_base_output_dir = '/home/tim/Work/nexa/nexa-audio-video-pipelines/data/out/openpose/multiple'
-host_models_dir = '/home/tim/Work/nexa/nexa-audio-video-pipelines/data/models/openpose/models/'
+host_video_dir = os.path.join(PROJECT_ROOT, 'data/test/sentimotion')
+host_base_output_dir = os.path.join(PROJECT_ROOT, 'data/out/openpose/multiple')
+host_models_dir = os.path.join(PROJECT_ROOT, 'data/models/openpose/models/')
 container_name = 'd0ckaaa/openpose'
 
 # Define OpenPose parameters
 net_resolution = '-1x160'
 display = '0'
 render_pose = '0'
-write_json = 'output/'
 
 
 # Function to run a command

@@ -13,10 +13,16 @@ Runs as a service.
 
 ## Openpose
 
+### Requirements
+
 Current implementation relies on this Docker [image](https://hub.docker.com/r/d0ckaaa/openpose). 
+Requires [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html). 
+
 The installation script for Openpose is supposed to fetch models from a webpage, but the links are [broken](https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/1602).
 To fix this I have downloaded the models manually from [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/1602#issuecomment-641653411).
 So in the process file/files scripts the models are automatically copied into the container after start.
+
+### Output format
 
 The output format for openpose is described in the [documentation](https://cmu-perceptual-computing-lab.github.io/openpose/web/html/doc/md_doc_02_output.html).
 Since openpose produces one output file for every frame I am currently working on simple script to merge

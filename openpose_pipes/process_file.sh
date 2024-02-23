@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# Load environment variables from .env file
+export $(cat ../.env | xargs)
+
 # Define paths
-HOST_VIDEO_PATH="/home/tim/Work/nexa/nexa-audio-video-pipelines/data/test/sentimotion/A67_pea_v_3.mov"  # Full path to the input video on your host
-HOST_OUTPUT_DIR="/home/tim/Work/nexa/nexa-audio-video-pipelines/data/out/openpose/single"  # Directory where you want to save output on your host
-HOST_MODELS_DIR="/home/tim/Work/nexa/nexa-audio-video-pipelines/data/models/openpose/models/"  # Directory where your OpenPose models are located on your host
-CONTAINER_NAME="d0ckaaa/openpose"  # Name of the OpenPose Docker image
+HOST_VIDEO_PATH=$PROJECT_ROOT/data/test/sentimotion/A67_pea_v_3.mov  # Full path to the input video on your host
+HOST_OUTPUT_DIR=$PROJECT_ROOT/data/out/openpose/single  # Directory where you want to save output on your host
+HOST_MODELS_DIR=$PROJECT_ROOT/data/models/openpose/models/  # Directory where your OpenPose models are located on your host
+CONTAINER_NAME=d0ckaaa/openpose  # Name of the OpenPose Docker image
 
 # Define OpenPose parameters
 NET_RESOLUTION="-1x160"  # Adjust based on your GPU memory and requirements

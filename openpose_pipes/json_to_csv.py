@@ -36,8 +36,8 @@ for frame_index, json_file in enumerate(sorted(json_files)):
 
         # Process body, left hand, and right hand keypoints
         frame_data.update(process_keypoints(person_data['pose_keypoints_2d'], body_keypoints, 'body_'))
-        frame_data.update(process_keypoints(person_data['hand_left_keypoints_2d'], hand_keypoints, 'left_hand_'))
-        frame_data.update(process_keypoints(person_data['hand_right_keypoints_2d'], hand_keypoints, 'right_hand_'))
+        # frame_data.update(process_keypoints(person_data['hand_left_keypoints_2d'], hand_keypoints, 'left_hand_'))
+        # frame_data.update(process_keypoints(person_data['hand_right_keypoints_2d'], hand_keypoints, 'right_hand_'))
 
         all_frames_data.append(frame_data)
 

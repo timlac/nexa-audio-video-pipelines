@@ -1,9 +1,13 @@
 import opensmile
 import os
 import pandas as pd
+from dotenv import load_dotenv
 
-input_path = "data/test/sentimotion/A67_pea_v_3.mov"
-output_dir = "data/out/opensmile/single/"
+load_dotenv()
+PROJECT_ROOT = os.getenv("PROJECT_ROOT")
+
+input_path = os.path.join(PROJECT_ROOT, "data/test/sentimotion/A67_pea_v_3.mov")
+output_dir = os.path.join(PROJECT_ROOT, "data/out/opensmile/single/")
 output_filename = "A67_pea_v_3.csv"
 os.makedirs(output_dir, exist_ok=True)
 

@@ -40,3 +40,6 @@ but does not keep track of who is who across multiple frames. This can be handle
 - Explore different options for person tracking, see [Github issue](https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/1448).
 - Use Openface person identification and sync some part of the body, 
   e.g. the nose, and apply the same person id to the openpose output. 
+
+Openpose does not seem to detect hands properly if the full arm length is not continuously captured in the input video.
+

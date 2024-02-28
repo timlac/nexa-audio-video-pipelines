@@ -2,18 +2,23 @@ import os
 import opensmile
 import glob
 
-
 from utils import get_filename
+
+from dotenv import load_dotenv
+
+load_dotenv()
+PROJECT_ROOT = os.getenv("PROJECT_ROOT")
+
 
 smile = opensmile.Smile(
     feature_set=opensmile.FeatureSet.eGeMAPSv02,
     feature_level=opensmile.FeatureLevel.LowLevelDescriptors,
 )
 
-input_dir = "data/test/sentimotion/**/*"
+input_dir = os.path.join(PROJECT_ROOT, "data/test/sentimotion/**/*")
 
 # all the output .csv files will be put in this directory, under the same name
-output_dir = "data/out/opensmile/multiple"
+output_dir = os.path.join(PROJECT_ROOT, "data/out/opensmile/multiple")
 os.makedirs(output_dir, exist_ok=True)
 
 file_paths = glob.glob(input_dir, recursive=True)

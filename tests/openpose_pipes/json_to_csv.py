@@ -17,7 +17,7 @@ def process_keypoints(keypoints_data, keypoints, prefix):
 
 # Define the directory containing the JSON output files and the output JSON file path
 json_dir = '../data/out/openpose/multiple/A102_gra_p_3/*.json'
-aggregated_json_path = '../data/out/openpose/aggregated_data.json'
+aggregated_json_path = '../../data/out/openpose/aggregated_data.json'
 
 json_files = glob(json_dir)
 

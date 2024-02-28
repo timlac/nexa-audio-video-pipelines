@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load environment variables from .env file
-export $(cat ../.env | xargs)
+export $(cat ../../.env | xargs)
 
 export DATA_MOUNT=$PROJECT_ROOT/data
 

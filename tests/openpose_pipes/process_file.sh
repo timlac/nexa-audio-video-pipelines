@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load environment variables from .env file
-export $(cat ../.env | xargs)
+export $(cat ../../.env | xargs)
 
 # Define paths
 HOST_VIDEO_PATH=$PROJECT_ROOT/data/test/sentimotion/A67_pea_v_3.mov  # Full path to the input video on your host

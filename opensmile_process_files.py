@@ -1,7 +1,7 @@
 import os
 import opensmile
 from glob import glob
-import argparse  # Import argparse module
+import argparse
 from utils import get_filename
 from dotenv import load_dotenv
 

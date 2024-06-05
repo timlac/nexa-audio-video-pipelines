@@ -43,3 +43,8 @@ but does not keep track of who is who across multiple frames. This can be handle
 
 Openpose does not seem to detect hands properly if the full arm length is not continuously captured in the input video.
 
+### TODO
+
+Make sure timestamps are still included in the opensmile output. If not fix this and rerun the deception experiment for Franco. 
+
+

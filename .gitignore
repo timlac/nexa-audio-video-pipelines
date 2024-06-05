@@ -9,6 +9,8 @@ data/test/dyads
 
 openface/analysis
 
+
+fiddle.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

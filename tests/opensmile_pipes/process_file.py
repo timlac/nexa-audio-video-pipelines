@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 load_dotenv()
 PROJECT_ROOT = os.getenv("PROJECT_ROOT")
 
-input_path = os.path.join(PROJECT_ROOT, "data/test/sentimotion/A67_pea_v_3.mov")
+input_path = os.path.join(PROJECT_ROOT, "data/test/random_examples/jodie_foster.mp4")
 output_dir = os.path.join(PROJECT_ROOT, "data/out/opensmile/single/")
-output_filename = "A67_pea_v_3.csv"
+output_filename = "jodie_foster.csv"
 os.makedirs(output_dir, exist_ok=True)
 
 # set opensmile parameters
@@ -23,5 +23,5 @@ df = smile.process_file(input_path)
 print(f'Done')
 
 # save csv
-df.to_csv(os.path.join(output_dir, output_filename), index=False)
+df.to_csv(os.path.join(output_dir, output_filename))
 print(f'Saved to {os.path.join(output_dir, output_filename)}')

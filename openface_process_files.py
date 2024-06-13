@@ -51,4 +51,4 @@ for input_file in input_files:
 
 subprocess.run(f'docker exec openface chown -R {os.getuid()}:{os.getuid()} "{DATA_MOUNT}"', shell=True, check=True)
 
-subprocess.run(f'docker-compose -f "{DOCKER_COMPOSE_PATH}" down', shell=True, check=True)
+subprocess.run(f'docker-compose -f "{DOCKER_COMPOSE_PATH}" down --remove-orphans', shell=True, check=True)

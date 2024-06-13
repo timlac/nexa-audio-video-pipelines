@@ -38,4 +38,4 @@ for idx, file_path in enumerate(file_paths):
     output_path = os.path.join(output_dir, filename + ".csv")
 
     # Save CSV
-    df.to_csv(output_path, index=False)
+    df.to_csv(output_path)

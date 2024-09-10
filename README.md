@@ -47,4 +47,6 @@ Openpose does not seem to detect hands properly if the full arm length is not co
 
 Make sure timestamps are still included in the opensmile output. If not fix this and rerun the deception experiment for Franco. 
 
+Implement parallel processing for opensmile to speed up the pipeline
+
 

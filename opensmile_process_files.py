@@ -27,7 +27,8 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Search for audio files recursively within input_dir
 file_paths = (glob(os.path.join(input_dir, '**/*.mov'), recursive=True)
-              + glob(os.path.join(input_dir, "**/*.mp4"), recursive=True))
+              + glob(os.path.join(input_dir, "**/*.mp4"), recursive=True)
+              + glob(os.path.join(input_dir, "**/*.mkv"), recursive=True))
 
 for idx, file_path in enumerate(file_paths):
     print(f"processing file {file_path}, number {idx + 1} out of {len(file_paths)}")

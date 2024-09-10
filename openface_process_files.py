@@ -39,7 +39,8 @@ DATA_MOUNT = find_common_ancestor(INPUT_DIR, OUTPUT_DIR)
 os.environ['DATA_MOUNT'] = DATA_MOUNT
 # Search for .mov and .mp4 files recursively within INPUT_DIR
 input_files = (glob(os.path.join(INPUT_DIR, "**/*.mov"), recursive=True)
-               + glob(os.path.join(INPUT_DIR, "**/*.mp4"), recursive=True))
+               + glob(os.path.join(INPUT_DIR, "**/*.mp4"), recursive=True)
+               + glob(os.path.join(INPUT_DIR, "**/*.mkv"), recursive=True))
 
 # Start OpenFace Docker container
 subprocess.run(f'docker-compose -f "{DOCKER_COMPOSE_PATH}" up -d openface && sync', shell=True, check=True)

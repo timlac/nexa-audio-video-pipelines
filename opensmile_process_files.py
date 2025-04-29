@@ -15,7 +15,7 @@ args = parser.parse_args()
 # Initialize openSMILE
 smile = opensmile.Smile(
     feature_set=opensmile.FeatureSet.eGeMAPSv02,
-    feature_level=opensmile.FeatureLevel.LowLevelDescriptors,
+    feature_level=opensmile.FeatureLevel.Functionals,
 )
 
 # Use arguments for input and output directories

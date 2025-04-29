@@ -8,8 +8,18 @@ Relies on simple python wrapper [package](https://pypi.org/project/opensmile/).
 
 ## Openface 
 
+### Videos
+
 Current implementation relies on the Docker file provided in the [OpenFace repository](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Docker).
 Runs as a service. 
+
+### Images
+
+Image processing is done using the `FaceLandmarkImg` (with `-fdir`) command or `FeatureExtraction` command.
+
+Note that `FaceLandmarkImg` and `FeatureExtraction` have equivalent functionality, see [GitHub issue](https://github.com/TadasBaltrusaitis/OpenFace/issues/149).
+
+Can remove the `FeatureExtraction` version for images and use `FaceLandmarkImg` instead.
 
 ## Openpose
 
